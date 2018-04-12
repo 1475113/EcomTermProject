@@ -42,7 +42,6 @@ CREATE TABLE IF NOT EXISTS `CarPartListing` (
     `PostDate`         DATE            NOT NULL,
     `Description`      VARCHAR (65535) NOT NULL,
     `Username`         VARCHAR (50)    NOT NULL,
-    `Mileage`          INT             NOT NULL,
     `Price`            DECIMAL (15,2)  NOT NULL,
     `ImageId`          INT                 NULL,
     `RegionId`         INT             NOT NULL,
