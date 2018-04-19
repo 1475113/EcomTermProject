@@ -8,8 +8,8 @@ CREATE TABLE IF NOT EXISTS `BusinessProfile` (
     `RatingCounter`         INT          NOT NULL,
     `Phone`                 VARCHAR (15) NOT NULL,
     `Email`                 VARCHAR (50) NOT NULL,
-    `Address`               VARCHAR (50) NOT NULL.
-    `Postal`                VARCHAR (7)  NOT NULL.
+    `Address`               VARCHAR (50) NOT NULL,
+    `Postal`                VARCHAR (7)  NOT NULL,
     PRIMARY KEY CLUSTERED (`BusinessProfileId` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
@@ -123,10 +123,6 @@ ALTER TABLE `Login`
 -- Add Constraints to Tables
 
 -- BusinessProfile
-ALTER TABLE `BusinessProfile`
-    ADD CONSTRAINT `FK_BusinessProfileId_ToLocation` FOREIGN KEY (`LocationId`)
-    REFERENCES `Location` (`LocationId`) ON DELETE CASCADE;
-
 ALTER TABLE `BusinessProfile`
     ADD CONSTRAINT `FK_BusinessProfileId_ToLogin` FOREIGN KEY (`LoginId`)
     REFERENCES `Login` (`LoginId`) ON DELETE CASCADE;
