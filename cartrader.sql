@@ -4,11 +4,12 @@ CREATE TABLE IF NOT EXISTS `BusinessProfile` (
     `BusinessProfileId`     INT          NOT NULL,
     `LoginId`               INT          NOT NULL,
     `BusinessName`          VARCHAR (50) NOT NULL,
-    `LocationId`            INT          NOT NULL,
     `Rating`                INT              NULL,
     `RatingCounter`         INT          NOT NULL,
     `Phone`                 VARCHAR (15) NOT NULL,
     `Email`                 VARCHAR (50) NOT NULL,
+    `Address`               VARCHAR (50) NOT NULL.
+    `Posta`                 VARCHAR (7)  NOT NULL.
     PRIMARY KEY CLUSTERED (`BusinessProfileId` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
