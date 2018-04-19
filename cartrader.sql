@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `BusinessProfile` (
     `Phone`                 VARCHAR (15) NOT NULL,
     `Email`                 VARCHAR (50) NOT NULL,
     `Address`               VARCHAR (50) NOT NULL.
-    `Posta`                 VARCHAR (7)  NOT NULL.
+    `Postal`                VARCHAR (7)  NOT NULL.
     PRIMARY KEY CLUSTERED (`BusinessProfileId` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
@@ -75,15 +75,6 @@ CREATE TABLE IF NOT EXISTS `Inbox` (
     `Message`          VARCHAR (65535) NOT NULL,
     `Date`             DATE            NOT NULL,
     PRIMARY KEY CLUSTERED (`MessageId` ASC)
-) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
-
--- Location Table
-
-CREATE TABLE IF NOT EXISTS `Location` (
-    `LocationId` INT             NOT NULL,
-    `Postal`     VARCHAR (7)     NOT NULL,
-    `Address`    VARCHAR (65535) NOT NULL,
-    PRIMARY KEY CLUSTERED (`LocationId` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Login Table
