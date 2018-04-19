@@ -1,7 +1,7 @@
 -- BusinessProfile Table
 
 CREATE TABLE IF NOT EXISTS `BusinessProfile` (
-    `BusinessProfileId`     INT          NOT NULL,
+    `ID`     INT          NOT NULL,
     `LoginId`               INT          NOT NULL,
     `BusinessName`          VARCHAR (50) NOT NULL,
     `Rating`                INT              NULL,
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `BusinessProfile` (
 -- CarListing Table
 
 CREATE TABLE IF NOT EXISTS `CarListing` (
-    `CarListingId` INT              NOT NULL,
+    `ID` INT              NOT NULL,
     `CarMake`      VARCHAR (50)     NOT NULL,
     `CarModel`     VARCHAR (50)     NOT NULL,
     `CarTrim`      VARCHAR (50)     NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `CarListing` (
 -- CarPartListing Table
 
 CREATE TABLE IF NOT EXISTS `CarPartListing` (
-    `CarPartListingId` INT             NOT NULL,
+    `ID` INT             NOT NULL,
     `PostDate`         DATE            NOT NULL,
     `Description`      VARCHAR (65535) NOT NULL,
     `LoginId`          INT             NOT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `CarPartListing` (
 -- Comments Table
 
 CREATE TABLE IF NOT EXISTS `Comment` (
-    `CommentId`     INT             NOT NULL,
+    `ID`     INT             NOT NULL,
     `LoginId`       INT             NOT NULL,
     `Comment`       VARCHAR (65535) NOT NULL,
     `ListingId`     INT                 NULL,
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `Comment` (
 -- Image Table
 
 CREATE TABLE IF NOT EXISTS `Image` (
-    `ImageId`       INT             NOT NULL,
+    `ID`       INT             NOT NULL,
     `ListingId`     INT             NOT NULL,
     `ImageURL`      VARCHAR (65535) NOT NULL,
     PRIMARY KEY CLUSTERED (`ImageId` ASC)
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `Image` (
 -- Inbox Table
 
 CREATE TABLE IF NOT EXISTS `Inbox` (
-    `MessageId`        INT             NOT NULL,
+    `ID`        INT             NOT NULL,
     `SenderLoginId`    INT             NOT NULL,
     `ReceiverLoginId`  INT             NOT NULL,
     `Message`          VARCHAR (65535) NOT NULL,
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `Inbox` (
 -- Login Table
 
 CREATE TABLE IF NOT EXISTS `Login` (
-    `LoginId`      INT             NOT NULL,
+    `ID`      INT             NOT NULL,
     `Username`     VARCHAR (50)    NOT NULL,
     `PasswordHash` VARCHAR (65535) NOT NULL,
     `Status`       INT                 NULL,
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `Login` (
 -- Profile Table
 
 CREATE TABLE IF NOT EXISTS `Profile` (
-    `ProfileId` INT          NOT NULL,
+    `ID` INT          NOT NULL,
     `LoginId`   INT          NOT NULL,
     `FirstName` VARCHAR (50) NOT NULL,
     `LastName`  VARCHAR (50) NOT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `Region` (
 -- Wishlist Table
 
 CREATE TABLE IF NOT EXISTS `Wishlist` (
-    `WishlistId`    INT NOT NULL,
+    `ID`    INT NOT NULL,
     `ListingId`     INT     NULL,
     `PartListingId` INT     NULL,
     PRIMARY KEY CLUSTERED (`WishlistId` ASC)
