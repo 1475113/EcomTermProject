@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `BusinessProfile` (
     `Email`                 VARCHAR (50) NOT NULL,
     `Address`               VARCHAR (50) NOT NULL,
     `Postal`                VARCHAR (7)  NOT NULL,
-    PRIMARY KEY CLUSTERED (`BusinessProfileId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- CarListing Table
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `CarListing` (
     `ImageId`      INT                  NULL,
     `RegionId`     INT              NOT NULL,
     `Views`        INT              NOT NULL,
-    PRIMARY KEY CLUSTERED (`CarListingId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- CarPartListing Table
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `CarPartListing` (
     `ImageId`          INT                 NULL,
     `RegionId`         INT             NOT NULL,
     `Views`            INT             NOT NULL,
-    PRIMARY KEY CLUSTERED (`CarPartListingId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Comments Table
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `Comment` (
     `Comment`       VARCHAR (65535) NOT NULL,
     `ListingId`     INT                 NULL,
     `PartListingId` INT                 NULL,
-    PRIMARY KEY CLUSTERED (`CommentId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Image Table
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `Image` (
     `ID`       INT             NOT NULL,
     `ListingId`     INT             NOT NULL,
     `ImageURL`      VARCHAR (65535) NOT NULL,
-    PRIMARY KEY CLUSTERED (`ImageId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Inbox Table
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `Inbox` (
     `ReceiverLoginId`  INT             NOT NULL,
     `Message`          VARCHAR (65535) NOT NULL,
     `Date`             DATE            NOT NULL,
-    PRIMARY KEY CLUSTERED (`MessageId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Login Table
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `Login` (
     `Username`     VARCHAR (50)    NOT NULL,
     `PasswordHash` VARCHAR (65535) NOT NULL,
     `Status`       INT                 NULL,
-    PRIMARY KEY CLUSTERED (`LoginId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Profile Table
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `Profile` (
     `LastName`  VARCHAR (50) NOT NULL,
     `Phone`     VARCHAR (50) NOT NULL,
     `Email`     VARCHAR (50) NOT NULL,
-    PRIMARY KEY CLUSTERED (`ProfileId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Region Table
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `Profile` (
 CREATE TABLE IF NOT EXISTS `Region` (
     `RegionId`   INT          NOT NULL,
     `RegionName` VARCHAR (10)     NULL,
-    PRIMARY KEY CLUSTERED (`RegionId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Wishlist Table
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `Wishlist` (
     `ID`    INT NOT NULL,
     `ListingId`     INT     NULL,
     `PartListingId` INT     NULL,
-    PRIMARY KEY CLUSTERED (`WishlistId` ASC)
+    PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Add Unique to Login
