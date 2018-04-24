@@ -1,0 +1,13 @@
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Montreal');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Laval');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Sagne Lac-Saint-Jean');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Longeuil');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'West Island');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Montreal Nord');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Rive Nord');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Rive Sud');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Sherbrooke');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Laurentides');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Lanaudiere');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Mauricie');
+INSERT INTO `region` (`RegionId`, `RegionName`) VALUES (NULL, 'Rimouski');
