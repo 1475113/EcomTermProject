@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `CarListing` (
     `Price`        DECIMAL (15,2)   NOT NULL,
     `ImageId`      INT                  NULL,
     `RegionId`     INT              NOT NULL,
-    `Views`        INT              NOT NULL,
+    `Views`        INT                  NULL,
     PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `CarPartListing` (
     `Price`            DECIMAL (15,2)  NOT NULL,
     `ImageId`          INT                 NULL,
     `RegionId`         INT             NOT NULL,
-    `Views`            INT             NOT NULL,
+    `Views`            INT                 NULL,
     PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
