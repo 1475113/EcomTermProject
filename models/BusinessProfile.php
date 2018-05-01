@@ -3,7 +3,7 @@
 class BusinessProfile
 {
 	public $bProfileId;
-	public $username;
+	public $logInId;
 	public $businessName;
 	public $locationId;
 	public $rating;
