@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `Profile` (
 
 CREATE TABLE IF NOT EXISTS `Region` (
     `ID`   INT          NOT NULL,
-    `RegionName` VARCHAR (10)     NULL,
+    `RegionName` VARCHAR (30)     NULL,
     PRIMARY KEY CLUSTERED (`ID` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
