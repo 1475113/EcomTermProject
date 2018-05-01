@@ -1,6 +1,6 @@
 <?php
 
-class Region
+class Region extends Model
 {
 	public $regionId;
 	public $regionName;

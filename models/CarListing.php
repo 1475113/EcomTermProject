@@ -2,15 +2,16 @@
 
 class CarListing extends Model
 {
-	public $carListingId;
+	public $_PKName = 'CarListingId';
 	public $carMake;
 	public $carModel;
+	public $carTrim;
 	public $carYear;
-	public $mileage;
-	public $postDate;
 	public $description;
-	public $loginId;
+	public $mileage;
 	public $price;
+	public $postDate;
+	public $loginId;
 	public $imageId;
 	public $regionId;
 	public $views;
