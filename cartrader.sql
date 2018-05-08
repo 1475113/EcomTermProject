@@ -4,11 +4,12 @@ CREATE TABLE IF NOT EXISTS `BusinessProfile` (
     `BusinessProfileId`     INT          NOT NULL,
     `LoginId`               INT          NOT NULL,
     `BusinessName`          VARCHAR (50) NOT NULL,
-    `LocationId`            INT          NOT NULL,
     `Rating`                INT              NULL,
     `RatingCounter`         INT          NOT NULL,
     `Phone`                 VARCHAR (15) NOT NULL,
     `Email`                 VARCHAR (50) NOT NULL,
+    `Address`               VARCHAR (50) NOT NULL,
+    `Postal`                VARCHAR (7)  NOT NULL,
     PRIMARY KEY CLUSTERED (`BusinessProfileId` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
@@ -74,15 +75,6 @@ CREATE TABLE IF NOT EXISTS `Inbox` (
     `Message`          VARCHAR (65535) NOT NULL,
     `Date`             DATE            NOT NULL,
     PRIMARY KEY CLUSTERED (`MessageId` ASC)
-) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
-
--- Location Table
-
-CREATE TABLE IF NOT EXISTS `Location` (
-    `LocationId` INT             NOT NULL,
-    `Postal`     VARCHAR (7)     NOT NULL,
-    `Address`    VARCHAR (65535) NOT NULL,
-    PRIMARY KEY CLUSTERED (`LocationId` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
 -- Login Table
@@ -184,10 +176,6 @@ ALTER TABLE `Login`
 -- Add Constraints to Tables
 
 -- BusinessProfile
-ALTER TABLE `BusinessProfile`
-    ADD CONSTRAINT `FK_BusinessProfileId_ToLocation` FOREIGN KEY (`LocationId`)
-    REFERENCES `Location` (`LocationId`) ON DELETE CASCADE;
-
 ALTER TABLE `BusinessProfile`
     ADD CONSTRAINT `FK_BusinessProfileId_ToLogin` FOREIGN KEY (`LoginId`)
     REFERENCES `Login` (`LoginId`) ON DELETE CASCADE;
