@@ -165,7 +165,11 @@ CREATE TABLE `region` (
 CREATE TABLE `wishlist` (
   `WishlistId` int(11) NOT NULL,
   `ListingId` int(11) DEFAULT NULL,
-  `PartListingId` int(11) DEFAULT NULL
+  `PartListingId` int(11) DEFAULT NULL,
+  `CarMake` varchar(50) NOT NULL,
+  `CarModel` varchar(50) NOT NULL,
+  `CarTrim` varchar(50) NOT NULL,
+  `CarYear` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
