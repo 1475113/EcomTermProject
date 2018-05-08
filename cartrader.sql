@@ -53,7 +53,6 @@ CREATE TABLE IF NOT EXISTS `Comment` (
     `LoginId`       INT             NOT NULL,
     `Comment`       VARCHAR (65535) NOT NULL,
     `ListingId`     INT                 NULL,
-    `PartListingId` INT                 NULL,
     PRIMARY KEY CLUSTERED (`CommentId` ASC)
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 
@@ -207,10 +206,6 @@ ALTER TABLE `CarPartListing`
     REFERENCES `Image` (`ImageId`) ON DELETE CASCADE;
 
 -- Comment
-ALTER TABLE `Comment`
-    ADD CONSTRAINT `FK_Comments_ToCarPartListing` FOREIGN KEY (`PartListingId`)
-    REFERENCES `CarPartListing` (`CarPartListingId`) ON DELETE CASCADE;
-
 ALTER TABLE `Comment`
     ADD CONSTRAINT `FK_Comments_ToCarListing` FOREIGN KEY (`ListingId`)
     REFERENCES `CarListing` (`CarListingId`) ON DELETE CASCADE;
