@@ -103,6 +103,11 @@ CREATE TABLE `image` (
   `ImageURL` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `imagepart` (
+  `ImageId` int(11) NOT NULL,
+  `ListingId` int(11) NOT NULL,
+  `ImageURL` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 
 --
@@ -199,7 +204,7 @@ ALTER TABLE `carpartlisting`
   ADD PRIMARY KEY (`CarPartListingId`),
   ADD KEY `FK_CarPartListings_ToLogin` (`LoginId`),
   ADD KEY `FK_CarPartListings_ToRegion` (`RegionId`),
-  ADD KEY `FK_CarPartListings_ToImage` (`ImageId`);
+  ADD KEY `FK_CarPartListings_ToImagepart` (`ImageId`);
 
 --
 -- Indexes for table `comment`
@@ -216,6 +221,8 @@ ALTER TABLE `comment`
 ALTER TABLE `image`
   ADD PRIMARY KEY (`ImageId`);
 
+ALTER TABLE `imagepart`
+  ADD PRIMARY KEY (`ImageId`);
 --
 -- Indexes for table `inbox`
 --
@@ -281,6 +288,9 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
+  MODIFY `ImageId` int(11) NOT NULL AUTO_INCREMENT;
+  
+  ALTER TABLE `imagepart`
   MODIFY `ImageId` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `inbox`
